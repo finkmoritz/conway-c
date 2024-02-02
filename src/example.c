@@ -1,4 +1,4 @@
-#include "conway.h"
+#include <conway.h>
 
 int main()
 {

@@ -5,7 +5,8 @@ This library implements Conway's Game of Life.
 ## Compile
 
 ```
-gcc example.c -o example
+cd src
+make
 ```
 
 ## Run

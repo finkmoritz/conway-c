@@ -1,24 +1,14 @@
-#ifndef CONWAY_H_
-#define CONWAY_H_
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
- 
-/* Holds all information needed for the Game of Life. */
-typedef struct conway_game {
-    int width;
-    int height;
-    char* cells;
-} conway_game;
 
-/* Free memory allocated by this object. */
+#include "conway.h"
+
 void destroy(conway_game* game) {
     free(game->cells);
     free(game);
 }
 
-/* Randomly initialize a Game of Life. */
 conway_game* initialize(int width, int height) {
     srand(time(NULL));
 
@@ -35,7 +25,6 @@ conway_game* initialize(int width, int height) {
     return game;
 }
 
-/* Print the cell map for this Game of Life. */
 void print(conway_game* game) {
     for(int h = 0; h < game->height; ++h) {
         for(int w = 0; w < game->width; ++w) {
@@ -44,5 +33,3 @@ void print(conway_game* game) {
         printf("\n");
     }
 }
-
-#endif // CONWAY_H_
