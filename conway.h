@@ -1,3 +1,6 @@
+#ifndef CONWAY_H_
+#define CONWAY_H_
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -42,11 +45,4 @@ void print(conway_game* game) {
     }
 }
 
-int main()
-{
-    conway_game* game_ptr = initialize(8, 8);
-    print(game_ptr);
-    destroy(game_ptr);
- 
-    return 0;
-}
+#endif // CONWAY_H_

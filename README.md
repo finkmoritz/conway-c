@@ -5,11 +5,11 @@ This library implements Conway's Game of Life.
 ## Compile
 
 ```
-gcc conway.c -o conway
+gcc example.c -o example
 ```
 
 ## Run
 
 ```
-./conway
+./example
 ```
