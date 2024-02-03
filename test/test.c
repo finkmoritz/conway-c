@@ -6,8 +6,12 @@ int main()
     set_cell(game_ptr, 0, 0);
  
     int test_success = cell_state(game_ptr, 0, 0) == 1;
+    
+    clear_cell(game_ptr, 0, 0);
+
+    test_success += cell_state(game_ptr, 0, 0) == 0;
 
     destroy(game_ptr);
  
-    return 1 - test_success;
+    return 2 - test_success;
 }

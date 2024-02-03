@@ -15,7 +15,7 @@ int cell_state(conway_game* game, int x, int y)
 void clear_cell(conway_game* game, unsigned int x, unsigned int y)
 {
     int xoleft, xoright, yoabove, yobelow;
-    unsigned char *cell_ptr = game->cells + (y * game->width) + x;
+    unsigned char *cell_ptr = game->cells + y * game->width + x;
 
     // Calculate the offsets to the eight neighboring cells,
     // accounting for wrapping around at the edges of the cell map
@@ -81,7 +81,7 @@ void print(conway_game* game) {
 void set_cell(conway_game* game, unsigned int x, unsigned int y)
 {
     int xoleft, xoright, yoabove, yobelow;
-    unsigned char *cell_ptr = game->cells + (y * game->width) + x;
+    unsigned char *cell_ptr = game->cells + y * game->width + x;
 
     // Calculate the offsets to the eight neighboring cells,
     // accounting for wrapping around at the edges of the cell map
