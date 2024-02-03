@@ -2,14 +2,26 @@
 
 This library implements Conway's Game of Life.
 
-## Compile
+## Get Started
+
+Choose a build target:
+- example: Run an example game.
+- test: Run unit test cases.
+
+### Compile
 
 ```
-make
+make <build target>
 ```
 
-## Run
+### Run
 
 ```
-./example
+./<build target>
+```
+
+### Clean Up
+
+```
+make clean
 ```

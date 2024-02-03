@@ -1,5 +1,6 @@
 # Project
-example
+src/example
+test/test
 
 # IDE
 .vscode
