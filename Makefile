@@ -1,9 +1,10 @@
-IDIR =../include
+IDIR =include
 CC=gcc
 CFLAGS=-I$(IDIR)
 
-ODIR=obj
-LDIR =../lib
+SRCDIR=src
+ODIR=$(SRCDIR)/obj
+LDIR =lib
 
 LIBS=
 
@@ -14,7 +15,7 @@ _OBJ = conway.o example.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
-$(ODIR)/%.o: %.c $(DEPS)
+$(ODIR)/%.o: $(SRCDIR)/%.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 example: $(OBJ)
